@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://branding.alterna.dev/style/default.css">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://branding.alterna.dev/favicon/internal/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://branding.alterna.dev/favicon/internal/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://branding.alterna.dev/favicon/internal/favicon-16x16.png">
+    <link rel="manifest" href="https://branding.alterna.dev/favicon/internal/site.webmanifest">
+    <link rel="mask-icon" href="https://branding.alterna.dev/favicon/internal/safari-pinned-tab.svg" color="#0066ff">
+    <link rel="shortcut icon" href="https://branding.alterna.dev/favicon/internal/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://branding.alterna.dev/favicon/internal/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        #fallback-link {
+            display: none;
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+        #fallback-link.show {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById('fallback-link').classList.add('show');
+            }, 3000);
+            window.location.href = "https://chs.alterna.dev/join";
+        });
+    </script>
+</head>
+<body>
+    <a id="fallback-link" href="https://chs.alterna.dev/join">Click here if you are not redirected</a>
+    <noscript>
+        <a href="https://chs.alterna.dev/join">Click here if you are not redirected</a>
+    </noscript>
+</body>
+</html>
