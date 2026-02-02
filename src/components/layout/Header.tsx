@@ -7,10 +7,8 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
 const navLinks = [
-  { href: "/about", label: "About" },
-  { href: "/chapters", label: "Chapters" },
-  { href: "/join", label: "Join" },
-  { href: "/contact", label: "Contact" },
+  { href: "/chapters", label: "Directory" },
+  { href: "/start", label: "Start a Chapter" },
 ];
 
 export default function Header() {
@@ -40,8 +38,8 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Button href="/join" className="text-sm">
-            Start a Chapter
+          <Button href="/start" className="text-sm">
+            Apply Now
           </Button>
         </nav>
 
@@ -107,10 +105,10 @@ export default function Header() {
                 </Link>
               ))}
               <Button
-                href="/join"
+                href="/start"
                 className="mt-4 w-full text-center"
               >
-                Start a Chapter
+                Apply Now
               </Button>
             </nav>
           </div>

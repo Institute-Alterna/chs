@@ -20,15 +20,33 @@ const steps = [
   },
   {
     number: "2",
-    title: "Get Approved & Trained",
+    title: "Chat",
     description:
-      "Our team reviews your application, provides feedback, and equips your founding strategists with everything they need.",
+      "We review your application and schedule a conversation to learn more about you and your goals.",
   },
   {
     number: "3",
-    title: "Launch & Lead",
+    title: "Find Your Fit",
     description:
-      "Start your chapter, host events, run workshops, and make a lasting impact in your school community.",
+      "Work with school administration to secure approval and identify the right home for your chapter.",
+  },
+  {
+    number: "4",
+    title: "Recruit Strategists",
+    description:
+      "Assemble your founding team of strategists — the passionate students who will lead alongside you.",
+  },
+  {
+    number: "5",
+    title: "Sign Agreements",
+    description:
+      "Finalise the charter and agreements that establish your chapter as an official CHS unit.",
+  },
+  {
+    number: "6",
+    title: "Go!",
+    description:
+      "Launch your chapter, host your first event, and start making an impact in your school community.",
   },
 ];
 
@@ -44,12 +62,11 @@ export default function ProcessSteps() {
             size="lg"
             className="mx-auto mt-4 max-w-xl text-center text-grey-600"
           >
-            Starting a chapter is straightforward. Here&apos;s what to
-            expect.
+            Starting a chapter is straightforward. Here&apos;s what to expect.
           </Text>
         </FadeInView>
 
-        <StaggerContainer className="mt-16 grid gap-8 md:grid-cols-3">
+        <StaggerContainer className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((step) => (
             <StaggerItem
               key={step.number}
@@ -61,16 +78,14 @@ export default function ProcessSteps() {
               <Heading as="h3" className="mt-6">
                 {step.title}
               </Heading>
-              <Text className="mt-3 text-grey-600">
-                {step.description}
-              </Text>
+              <Text className="mt-3 text-grey-600">{step.description}</Text>
             </StaggerItem>
           ))}
         </StaggerContainer>
 
         <FadeInView>
           <div className="mt-12 text-center">
-            <Button href="/join">Apply Now</Button>
+            <Button href="/start">Apply Now</Button>
           </div>
         </FadeInView>
       </Container>

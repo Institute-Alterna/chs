@@ -7,12 +7,8 @@ import {
 import { fallbackChapters } from "@/lib/data/fallback-chapters";
 import type { Chapter, ImpactStats } from "@/lib/types";
 
-const isSanityConfigured =
-  !!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID &&
-  !!process.env.NEXT_PUBLIC_SANITY_DATASET;
-
 export async function getChapters(): Promise<Chapter[]> {
-  if (!isSanityConfigured) {
+  if (!client) {
     return fallbackChapters;
   }
 
@@ -27,7 +23,7 @@ export async function getChapters(): Promise<Chapter[]> {
 export async function getChapterBySocietyId(
   societyId: string
 ): Promise<Chapter | null> {
-  if (!isSanityConfigured) {
+  if (!client) {
     return fallbackChapters.find((c) => c.societyId === societyId) ?? null;
   }
 
@@ -36,7 +32,9 @@ export async function getChapterBySocietyId(
       societyId,
     });
     return (
-      chapter ?? fallbackChapters.find((c) => c.societyId === societyId) ?? null
+      chapter ??
+      fallbackChapters.find((c) => c.societyId === societyId) ??
+      null
     );
   } catch {
     return fallbackChapters.find((c) => c.societyId === societyId) ?? null;
@@ -44,7 +42,7 @@ export async function getChapterBySocietyId(
 }
 
 export async function getAllChapterSlugs(): Promise<string[]> {
-  if (!isSanityConfigured) {
+  if (!client) {
     return fallbackChapters.map((c) => c.societyId);
   }
 

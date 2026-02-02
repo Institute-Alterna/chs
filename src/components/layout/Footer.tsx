@@ -4,10 +4,8 @@ import Container from "@/components/ui/Container";
 import Text from "@/components/ui/Text";
 
 const footerLinks = [
-  { href: "/about", label: "About" },
-  { href: "/chapters", label: "Chapters" },
-  { href: "/join", label: "Join" },
-  { href: "/contact", label: "Contact" },
+  { href: "/chapters", label: "Directory" },
+  { href: "/start", label: "Start a Chapter" },
 ];
 
 export default function Footer() {

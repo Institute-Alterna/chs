@@ -22,8 +22,8 @@ export default function Hero() {
         </FadeInView>
         <FadeInView delay={0.2}>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button href="/join">Start a Chapter</Button>
-            <Button variant="secondary" href="#what-is-chs">
+            <Button href="/start">Start a Chapter</Button>
+            <Button variant="secondary" href="#chapters-teaser">
               Learn More
             </Button>
           </div>
