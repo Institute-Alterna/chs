@@ -17,7 +17,7 @@ export default function StartPage() {
         title="Start a Chapter at Your School"
         subtitle="Whether you're a student or an administrator, we'll help you bring CHS to your community."
       />
-      <Section variant="light">
+      <Section variant="off-white">
         <Container>
           <div className="mx-auto max-w-2xl">
             <TallyEmbed

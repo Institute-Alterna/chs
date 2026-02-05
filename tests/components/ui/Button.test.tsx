@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import Button from "../Button";
+import Button from "@/components/ui/Button";
 
 afterEach(cleanup);
 
@@ -28,13 +28,22 @@ describe("Button", () => {
   it("applies primary variant classes by default", () => {
     render(<Button>Primary</Button>);
     const el = screen.getByText("Primary");
-    expect(el.className).toContain("bg-blue-600");
+    expect(el.className).toContain("border-blue-600");
+    expect(el.className).toContain("text-blue-600");
   });
 
   it("applies secondary variant classes", () => {
     render(<Button variant="secondary">Sec</Button>);
     const el = screen.getByText("Sec");
-    expect(el.className).toContain("border-blue-600");
+    expect(el.className).toContain("border-grey-300");
+    expect(el.className).toContain("text-grey-600");
+  });
+
+  it("applies filled variant classes", () => {
+    render(<Button variant="filled">Filled</Button>);
+    const el = screen.getByText("Filled");
+    expect(el.className).toContain("bg-blue-600");
+    expect(el.className).toContain("text-white");
   });
 
   it("applies ghost variant classes", () => {

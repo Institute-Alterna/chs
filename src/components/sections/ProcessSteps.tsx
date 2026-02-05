@@ -5,6 +5,7 @@ import Section from "@/components/ui/Section";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import Button from "@/components/ui/Button";
+import Label from "@/components/ui/Label";
 import {
   StaggerContainer,
   StaggerItem,
@@ -13,57 +14,58 @@ import FadeInView from "@/components/ui/FadeInView";
 
 const steps = [
   {
-    number: "1",
+    number: "01",
     title: "Apply",
     description:
       "Submit your application with details about your school, your team, and your vision for a chapter.",
   },
   {
-    number: "2",
+    number: "02",
     title: "Chat",
     description:
       "We review your application and schedule a conversation to learn more about you and your goals.",
   },
   {
-    number: "3",
+    number: "03",
     title: "Find Your Fit",
     description:
-      "Work with school administration to secure approval and identify the right home for your chapter.",
+      "Work with your school's administration to secure approval and identify how your chapter may work.",
   },
   {
-    number: "4",
-    title: "Recruit Strategists",
+    number: "04",
+    title: "Recruit Your Crew",
     description:
-      "Assemble your founding team of strategists — the passionate students who will lead alongside you.",
+      "Assemble your founding team of strategists: the passionate students who will lead alongside you.",
   },
   {
-    number: "5",
-    title: "Sign Agreements",
+    number: "05",
+    title: "Sign",
     description:
       "Finalise the charter and agreements that establish your chapter as an official CHS unit.",
   },
   {
-    number: "6",
-    title: "Go!",
+    number: "06",
+    title: "Launch!",
     description:
-      "Launch your chapter, host your first event, and start making an impact in your school community.",
+      "Host your first sessions, and start making an impact in your school community!",
   },
 ];
 
 export default function ProcessSteps() {
   return (
-    <Section variant="light">
+    <Section variant="off-white">
       <Container>
         <FadeInView>
-          <Heading as="h2" className="text-center">
-            How It Works
-          </Heading>
-          <Text
-            size="lg"
-            className="mx-auto mt-4 max-w-xl text-center text-grey-600"
-          >
-            Starting a chapter is straightforward. Here&apos;s what to expect.
-          </Text>
+          <div className="text-center">
+            <Label className="mb-4 block">The Process</Label>
+            <Heading as="h2">How It Works</Heading>
+            <Text
+              size="lg"
+              className="mx-auto mt-4 max-w-xl text-grey-600"
+            >
+              Starting a chapter is straightforward. Here&apos;s what to expect.
+            </Text>
+          </div>
         </FadeInView>
 
         <StaggerContainer className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -72,7 +74,7 @@ export default function ProcessSteps() {
               key={step.number}
               className="flex flex-col items-center text-center"
             >
-              <div className="flex size-14 items-center justify-center rounded-full bg-blue-600 text-xl font-bold text-white">
+              <div className="flex size-12 items-center justify-center rounded-sm bg-blue-600 font-mono text-sm font-medium text-white">
                 {step.number}
               </div>
               <Heading as="h3" className="mt-6">

@@ -12,6 +12,13 @@ export interface Strategist {
   photoUrl?: string;
 }
 
+export interface ChapterFeature {
+  _key: string;
+  title: string;
+  description: string;
+  icon?: string;
+}
+
 export interface Chapter {
   _id: string;
   societyId: string;
@@ -24,6 +31,14 @@ export interface Chapter {
   achievements: string[];
   founded: string;
   tallyContactFormId?: string;
+  // New Sanity-editable fields
+  isFlagship: boolean;
+  chapterIndex: number;
+  tagline: string;
+  heroImageUrl?: string;
+  mission: string;
+  overview?: string;
+  features: ChapterFeature[];
 }
 
 export interface ImpactStats {

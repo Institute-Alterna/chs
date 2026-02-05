@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import DirectoryTeaser from "@/components/sections/DirectoryTeaser";
+import ChapterShowcase from "@/components/sections/ChapterShowcase";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import Impact from "@/components/sections/Impact";
 import AboutUs from "@/components/sections/AboutUs";
@@ -13,6 +14,7 @@ export default async function Home() {
     <>
       <Hero />
       <DirectoryTeaser />
+      <ChapterShowcase />
       <ProcessSteps />
       <Impact stats={stats} />
       <AboutUs />

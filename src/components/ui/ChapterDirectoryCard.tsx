@@ -2,6 +2,7 @@ import Link from "next/link";
 import Card from "@/components/ui/Card";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
+import Badge from "@/components/ui/Badge";
 import type { Chapter } from "@/lib/types";
 
 export default function ChapterDirectoryCard({
@@ -15,9 +16,7 @@ export default function ChapterDirectoryCard({
         <div className="mb-3 flex items-center gap-2">
           <Heading as="h3">{chapter.name}</Heading>
         </div>
-        <span className="inline-block rounded-full bg-grey-100 px-3 py-1 text-xs font-medium text-grey-600">
-          {chapter.location}
-        </span>
+        <Badge>{chapter.location}</Badge>
         <Text className="mt-4 text-grey-600" size="sm">
           {chapter.description}
         </Text>

@@ -1,14 +1,7 @@
-"use client";
-
-import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/Text";
-import {
-  StaggerContainer,
-  StaggerItem,
-} from "@/components/ui/StaggerContainer";
+import Label from "@/components/ui/Label";
 import type { Strategist } from "@/lib/types";
 
 export default function StrategistGrid({
@@ -17,44 +10,41 @@ export default function StrategistGrid({
   strategists: Strategist[];
 }) {
   if (strategists.length === 0) {
-    return null;
+    return (
+      <Section variant="light">
+        <Container>
+          <div className="text-center">
+            <Label className="mb-4 block">Leadership</Label>
+            <Heading as="h2">Our Strategists</Heading>
+            <p className="mt-8 text-grey-600">
+              No strategists listed yet. Check back soon.
+            </p>
+          </div>
+        </Container>
+      </Section>
+    );
   }
 
   return (
     <Section variant="light">
       <Container>
-        <Heading as="h2" className="text-center">
-          Our Strategists
-        </Heading>
+        <div className="text-center">
+          <Label className="mb-4 block">Leadership</Label>
+          <Heading as="h2">Our Strategists</Heading>
+        </div>
 
-        <StaggerContainer className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {strategists.map((s) => (
-            <StaggerItem key={s._id} className="text-center">
-              {s.photoUrl ? (
-                <Image
-                  src={s.photoUrl}
-                  alt={s.name}
-                  width={96}
-                  height={96}
-                  className="mx-auto size-24 rounded-full object-cover"
-                />
-              ) : (
-                <div className="mx-auto flex size-24 items-center justify-center rounded-full bg-grey-200 text-sm text-grey-400">
-                  {s.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </div>
-              )}
-              <Heading as="h4" className="mt-4">
+            <div key={s._id} className="rounded bg-grey-100 p-6 text-center">
+              <div className="font-heading text-lg font-semibold text-black">
                 {s.name}
-              </Heading>
-              <Text size="sm" className="mt-1 text-grey-600">
+              </div>
+              <div className="mt-2 font-mono text-xs uppercase tracking-wider text-grey-600">
                 {s.roleLabel || s.role}
-              </Text>
-            </StaggerItem>
+              </div>
+            </div>
           ))}
-        </StaggerContainer>
+        </div>
       </Container>
     </Section>
   );

@@ -1,24 +1,51 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* CHS Blue (unchanged) */
   --color-blue-600: #0066ff;
   --color-blue-500: #408dff;
   --color-blue-400: #80b3ff;
-  --color-black: #0d0d0d;
+  --color-blue-100: #e6f0ff;
+
+  /* Neutrals (refined) */
+  --color-black: #000000;
+  --color-black-soft: #0d0d0d;
   --color-white: #ffffff;
-  --color-grey-900: #1a1a1a;
-  --color-grey-800: #262626;
-  --color-grey-600: #666666;
-  --color-grey-400: #999999;
-  --color-grey-200: #e5e5e5;
-  --color-grey-100: #f5f5f5;
-  --font-heading: var(--font-dm-sans), "SF Pro Display", -apple-system, sans-serif;
+  --color-off-white: #f5f5f3;
+
+  /* Extended Greys */
+  --color-grey-950: #0a0a0a;
+  --color-grey-900: #141414;
+  --color-grey-800: #1f1f1f;
+  --color-grey-700: #2a2a2a;
+  --color-grey-600: #525252;
+  --color-grey-500: #6b6b6b;
+  --color-grey-400: #8a8a8a;
+  --color-grey-300: #a3a3a3;
+  --color-grey-200: #d4d4d4;
+  --color-grey-100: #ededed;
+
+  /* Typography */
+  --font-heading: var(--font-onest), "SF Pro Display", -apple-system, sans-serif;
   --font-body: var(--font-dm-sans), "SF Pro Text", -apple-system, sans-serif;
-  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+  --font-mono: var(--font-dm-mono), "SF Mono", monospace;
+
+  /* Border Radius */
+  --radius-sm: 2px;
+  --radius-base: 4px;
 }
 
 body {
   background-color: var(--color-white);
   color: var(--color-black);
   font-family: var(--font-body);
+}
+
+/* Utility class for mono labels */
+.font-mono-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }

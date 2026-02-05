@@ -1,6 +1,9 @@
 "use client";
 
 import Container from "@/components/ui/Container";
+import Heading from "@/components/ui/Heading";
+import Label from "@/components/ui/Label";
+import Badge from "@/components/ui/Badge";
 import FadeInView from "@/components/ui/FadeInView";
 
 export default function ChapterHero({
@@ -14,15 +17,16 @@ export default function ChapterHero({
     <section className="flex min-h-[50vh] items-center bg-black pt-16 text-white">
       <Container className="py-20">
         <FadeInView>
-          <h1 className="max-w-3xl font-heading text-3xl font-bold tracking-[-0.02em] md:text-5xl lg:text-[56px] lg:leading-[64px]">
+          <Label className="mb-4 block text-grey-500">Chapter</Label>
+          <Heading as="h1" variant="h1">
             {title}
-          </h1>
+          </Heading>
         </FadeInView>
         {subtitle && (
           <FadeInView delay={0.1}>
-            <p className="mt-6 max-w-xl text-lg leading-7 text-grey-400">
-              {subtitle}
-            </p>
+            <div className="mt-6">
+              <Badge variant="dark">{subtitle}</Badge>
+            </div>
           </FadeInView>
         )}
       </Container>

@@ -14,7 +14,7 @@ export default function StatCard({
       <div className="font-heading text-4xl font-bold tracking-tight text-blue-600 md:text-5xl">
         {value}
       </div>
-      <div className="mt-2 text-sm font-medium text-grey-400">{label}</div>
+      <div className="font-mono-label mt-2 text-grey-400">{label}</div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export default function Card({
+export default function Label({
   children,
   className,
 }: {
@@ -8,6 +8,8 @@ export default function Card({
   className?: string;
 }) {
   return (
-    <div className={cn("rounded-sm p-6", className)}>{children}</div>
+    <span className={cn("font-mono-label text-grey-500", className)}>
+      {children}
+    </span>
   );
 }

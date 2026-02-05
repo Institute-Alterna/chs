@@ -2,11 +2,11 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { fallbackChapters } from "@/lib/data/fallback-chapters";
 
 // Mock the client module so tests don't need Sanity credentials
-vi.mock("../client", () => ({ client: null }));
+vi.mock("@/lib/sanity/client", () => ({ client: null }));
 
 // Import after mock is set up
 const { getChapters, getChapterBySocietyId, getAllChapterSlugs, getImpactStats } =
-  await import("../fetchers");
+  await import("@/lib/sanity/fetchers");
 
 describe("fetchers (no Sanity configured)", () => {
   beforeEach(() => {

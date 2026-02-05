@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
 const navLinks = [
@@ -13,16 +12,31 @@ const navLinks = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 bg-black/80 backdrop-blur-md">
-      <Container className="flex h-16 items-center justify-between">
+    <header
+      className={`fixed top-4 right-4 left-4 z-50 mx-auto max-w-[1392px] rounded-sm transition-all duration-300 ${
+        scrolled
+          ? "bg-black/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="flex h-14 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/logo.svg"
             alt="CHS"
-            width={80}
-            height={28}
+            width={72}
+            height={24}
             priority
           />
         </Link>
@@ -38,7 +52,7 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Button href="/start" className="text-sm">
+          <Button href="/start" variant="primary" className="text-sm">
             Apply Now
           </Button>
         </nav>
@@ -63,7 +77,7 @@ export default function Header() {
             <line x1="3" y1="18" x2="21" y2="18" />
           </svg>
         </button>
-      </Container>
+      </div>
 
       {/* Mobile drawer */}
       {menuOpen && (
@@ -72,7 +86,7 @@ export default function Header() {
             className="fixed inset-0 z-40 bg-black/60 transition-opacity duration-200"
             onClick={() => setMenuOpen(false)}
           />
-          <div className="fixed top-0 right-0 bottom-0 z-50 w-72 bg-grey-900 p-6 shadow-xl transition-transform duration-300 ease-out">
+          <div className="fixed top-0 right-0 bottom-0 z-50 w-72 rounded-l-sm bg-grey-900 p-6 shadow-xl transition-transform duration-300 ease-out">
             <div className="mb-8 flex justify-end">
               <button
                 type="button"

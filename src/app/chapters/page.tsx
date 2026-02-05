@@ -31,7 +31,7 @@ export default async function ChaptersPage() {
             ))}
             <a href="/start" className="group block">
               <Card className="flex h-full flex-col items-center justify-center border border-dashed border-grey-200 text-center transition-colors duration-150 group-hover:border-blue-600">
-                <div className="flex size-14 items-center justify-center rounded-full bg-blue-600/10 text-blue-600">
+                <div className="flex size-12 items-center justify-center rounded-sm bg-blue-600/10 text-blue-600">
                   <svg
                     width="24"
                     height="24"

@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Onest, DM_Sans, DM_Mono } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
+const onest = Onest({
+  variable: "--font-onest",
+  subsets: ["latin"],
+  weight: ["600", "700"],
+});
+
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
+});
+
+const dmMono = DM_Mono({
+  variable: "--font-dm-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -38,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB">
-      <body className={`${dmSans.variable} antialiased`}>
+      <body className={`${onest.variable} ${dmSans.variable} ${dmMono.variable} antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

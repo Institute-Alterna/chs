@@ -8,7 +8,7 @@ export default function Container({
   className?: string;
 }) {
   return (
-    <div className={cn("mx-auto max-w-[1280px] px-6", className)}>
+    <div className={cn("mx-auto max-w-[1400px] px-4", className)}>
       {children}
     </div>
   );

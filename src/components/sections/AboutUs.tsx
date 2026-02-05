@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
+import Label from "@/components/ui/Label";
 import FadeInView from "@/components/ui/FadeInView";
 
 export default function AboutUs() {
@@ -12,6 +13,7 @@ export default function AboutUs() {
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <FadeInView>
+            <Label className="mb-4 block">Who We Are</Label>
             <Heading as="h2">About Us</Heading>
           </FadeInView>
           <FadeInView delay={0.1}>

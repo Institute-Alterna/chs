@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
-import TallyEmbed from "../TallyEmbed";
+import TallyEmbed from "@/components/ui/TallyEmbed";
 
 afterEach(cleanup);
 
