@@ -19,17 +19,17 @@ export default function FlagshipHero({
   isRobinson = false,
 }: FlagshipHeroProps) {
   return (
-    <section className="relative bg-black py-20">
+    <section className="relative bg-black pt-50 lg:pt-140">
       <div className="container mx-auto px-6">
-        <h1 className="mb-6 font-heading text-6xl font-bold leading-none text-white md:text-7xl lg:text-8xl">
+        <h1 className="mb-4 font-heading text-6xl font-bold leading-none text-white md:text-7xl lg:text-8xl">
           {name}
         </h1>
 
-        <div className="mb-8">
-          <ChapterIndexBadge index={chapterIndex} />
+        <div className="mb-4 px-2">
+          <ChapterIndexBadge index={chapterIndex} isFlagship={true} />
         </div>
 
-        <div className="mb-12">
+        <div className="mb-12 px-2">
           <p className="font-mono text-sm font-medium uppercase tracking-wider text-grey-400">
             {isRobinson ? "THE FOUNDING CHAPTER" : tagline}
           </p>

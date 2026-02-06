@@ -15,20 +15,20 @@ const chapterLinks = [
 ];
 
 const connectLinks = [
-  { href: "mailto:hello@chsociety.org", label: "Email Us" },
-  { href: "https://github.com/alterna-chs", label: "GitHub" },
+  { href: "/contact", label: "Send us a memo" },
+  { href: "https://github.com/institute-alterna/chs", label: "Open Source" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-grey-950 py-16 text-grey-400">
       <Container>
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex flex-wrap justify-between gap-y-12">
           {/* Logo and tagline */}
-          <div className="lg:col-span-1">
+          <div>
             <Link href="/">
               <Image
-                src="/logo.svg"
+                src="/logo.webp"
                 alt="CHS"
                 width={64}
                 height={22}
@@ -39,62 +39,65 @@ export default function Footer() {
             </Text>
           </div>
 
-          {/* Navigate */}
-          <div>
-            <span className="font-mono-label text-grey-500">Navigate</span>
-            <nav className="mt-4 flex flex-col gap-3">
-              {navigateLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-grey-400 transition-colors hover:text-white"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
+          {/* Nav columns — grouped right */}
+          <div className="flex flex-wrap gap-x-16 gap-y-12">
+            {/* Navigate */}
+            <div>
+              <span className="font-mono-label text-grey-500">Navigate</span>
+              <nav className="mt-4 flex flex-col gap-3">
+                {navigateLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm text-grey-400 transition-colors hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
 
-          {/* Chapters */}
-          <div>
-            <span className="font-mono-label text-grey-500">Chapters</span>
-            <nav className="mt-4 flex flex-col gap-3">
-              {chapterLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-grey-400 transition-colors hover:text-white"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
+            {/* Chapters */}
+            <div>
+              <span className="font-mono-label text-grey-500">Chapters</span>
+              <nav className="mt-4 flex flex-col gap-3">
+                {chapterLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm text-grey-400 transition-colors hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
 
-          {/* Connect */}
-          <div>
-            <span className="font-mono-label text-grey-500">Connect</span>
-            <nav className="mt-4 flex flex-col gap-3">
-              {connectLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-grey-400 transition-colors hover:text-white"
-                  {...(link.href.startsWith("http") && {
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                  })}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+            {/* Connect */}
+            <div>
+              <span className="font-mono-label text-grey-500">Connect</span>
+              <nav className="mt-4 flex flex-col gap-3">
+                {connectLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm text-grey-400 transition-colors hover:text-white"
+                    {...(link.href.startsWith("http") && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
           </div>
         </div>
 
         <div className="mt-12 border-t border-grey-800 pt-8">
           <Text size="sm" className="text-grey-600">
-            &copy; {new Date().getFullYear()} Institute Alterna. Open source on GitHub under the MIT Licence.
+            &copy; {new Date().getFullYear()} <a href="https://alterna.dev" target="_blank" rel="noopener noreferrer">Institute Alterna</a>. Open source on GitHub under the MIT Licence.
           </Text>
         </div>
       </Container>

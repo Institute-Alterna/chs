@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Heading from "@/components/ui/Heading";
@@ -15,6 +16,7 @@ import {
 
 const chapterData = {
   name: "CHS Robinson",
+  chapterIndex: "CHS-1",
   location: "Tampa, FL",
   founded: "2024",
   description:
@@ -31,10 +33,10 @@ const chapterData = {
     "Represented at state-wide STEM fair",
   ],
   strategists: [
-    { role: "Principal Strategist" },
-    { role: "Academic Strategist" },
-    { role: "Community Strategist" },
-    { role: "Competition Strategist" },
+    { name: "Sebastián Camargo Marín", role: "Principal Strategist" },
+    { name: "Jonathan Okoro", role: "Academic Strategist" },
+    { name: "Zakary Beverly", role: "Community Strategist" },
+    { name: "Aleksander Meyer", role: "Competition Strategist" },
   ],
 };
 
@@ -46,7 +48,7 @@ export default function ChapterShowcase() {
           {/* Left Column - Hero Content */}
           <div>
             <FadeInView>
-              <Label className="mb-4 block text-grey-500">Featured Chapter</Label>
+              <Label className="mb-4 block text-grey-500">{chapterData.chapterIndex}</Label>
               <Heading as="h2" variant="h1">
                 {chapterData.name}
               </Heading>
@@ -74,19 +76,13 @@ export default function ChapterShowcase() {
             <FadeInView delay={0.4}>
               <div className="mt-12">
                 <Label className="mb-4 block text-grey-500">Leadership</Label>
-                <div className="flex flex-wrap gap-4">
+                <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                   {chapterData.strategists.map((strategist) => (
-                    <div
-                      key={strategist.role}
-                      className="flex items-center gap-3"
-                    >
-                      <div className="flex size-10 items-center justify-center rounded-sm bg-grey-800 text-xs font-medium text-grey-400">
-                        {strategist.role
-                          .split(" ")
-                          .map((word) => word[0])
-                          .join("")}
-                      </div>
-                      <span className="text-sm text-grey-400">
+                    <div key={strategist.role}>
+                      <span className="text-sm text-grey-200">
+                        {strategist.name}
+                      </span>
+                      <span className="block text-sm text-grey-500">
                         {strategist.role}
                       </span>
                     </div>
@@ -133,10 +129,15 @@ export default function ChapterShowcase() {
               </div>
             </FadeInView>
 
-            {/* Placeholder for future image/visual */}
+            {/* image/visual */}
             <FadeInView delay={0.4}>
-              <div className="mt-8 flex aspect-video items-center justify-center rounded-sm bg-grey-800 text-sm text-grey-500">
-                Chapter imagery — coming soon
+              <div className="relative mt-8 aspect-video overflow-hidden rounded-sm">
+                <Image
+                  src="/chapters/robinson/crew.webp"
+                  alt="CHS Robinson chapter crew"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </FadeInView>
           </div>

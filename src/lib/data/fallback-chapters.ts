@@ -54,7 +54,7 @@ export const fallbackChapters: Chapter[] = [
     isFlagship: true,
     chapterIndex: 1,
     tagline: "The founding chapter",
-    heroImageUrl: undefined,
+    heroImageUrl: "/chapters/robinson/hero.webp",
     mission:
       "CHS Robinson set the standard for what a Computing Honour Society chapter can achieve. We pioneered the model of student-led tech education that now spans schools worldwide.",
     overview: undefined,

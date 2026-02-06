@@ -36,7 +36,7 @@
 }
 
 body {
-  background-color: var(--color-white);
+  background-color: var(--color-grey-950);
   color: var(--color-black);
   font-family: var(--font-body);
 }

@@ -22,7 +22,7 @@ export async function generateMetadata({
   if (!chapter) return { title: "Chapter Not Found" };
 
   return {
-    title: chapter.name,
+    title: chapter.displayName,
     description: chapter.description,
   };
 }

@@ -13,9 +13,9 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <DirectoryTeaser />
       <ChapterShowcase />
       <ProcessSteps />
+      <DirectoryTeaser />
       <Impact stats={stats} />
       <AboutUs />
       <ApplyCTA />

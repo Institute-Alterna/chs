@@ -23,7 +23,7 @@ export default function ProductHero({
   heroImageUrl,
 }: ProductHeroProps) {
   return (
-    <section className="bg-black py-20">
+    <section className="bg-black pb-20 pt-50 lg:pt-80">
       <div className="container mx-auto px-6">
 
         {/* Mobile and tablet: stacked layout */}
@@ -33,15 +33,15 @@ export default function ProductHero({
             <h1 className="mb-4 font-heading text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
               {name}
             </h1>
-                    <div className="mb-8">
+                    <div className="mb-4">
           <ChapterIndexBadge index={chapterIndex} />
         </div>
 
-            <p className="text-xl text-grey-300 md:text-2xl">{tagline}</p>
+            <p className="text-xl text-grey-300 md:text-2xl mb-0">{tagline}</p>
           </div>
 
           {/* Specs sidebar (desktop) / below (mobile) */}
-          <div className="mt-12 lg:mt-0 lg:min-w-[400px]">
+          <div className="mt-6 lg:mt-0 lg:min-w-[400px]">
             <SpecsGrid stats={stats} founded={founded} location={location} />
           </div>
         </div>

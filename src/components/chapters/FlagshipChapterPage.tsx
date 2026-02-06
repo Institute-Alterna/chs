@@ -50,11 +50,7 @@ export default function FlagshipChapterPage({
       {/* 3. Impact Stats */}
       <Section variant="dark">
         <Container>
-          <div className="text-center">
-            <Label className="mb-4 block text-grey-500">Impact</Label>
-            <Heading as="h2">Chapter Impact</Heading>
-          </div>
-          <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:flex lg:justify-center lg:gap-16">
+          <div className="pb-8 grid grid-cols-2 gap-8 md:grid-cols-3 lg:flex lg:justify-center lg:gap-16">
             <StatCard value={`${chapter.stats.members}+`} label="Members" />
             <StatCard value={chapter.stats.events} label="Events" />
             {chapter.stats.workshops !== undefined && (
