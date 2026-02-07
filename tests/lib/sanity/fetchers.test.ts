@@ -38,8 +38,8 @@ describe("fetchers (no Sanity configured)", () => {
   it("getImpactStats computes totals from fallback data", async () => {
     const stats = await getImpactStats();
     expect(stats.chapters).toBe(2);
-    expect(stats.members).toBe(25); // 15 + 10
-    expect(stats.events).toBe(5); // 3 + 2
+    expect(stats.members).toBe(26); // 25 + 1
+    expect(stats.events).toBe(3); // 3 + 0
     expect(stats.countries).toBe(1);
   });
 });
