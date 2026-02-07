@@ -7,7 +7,6 @@ export const allChaptersQuery = `*[_type == "chapter"] | order(founded desc) {
   description,
   stats,
   founded,
-  tallyContactFormId,
   "strategists": strategists[]-> {
     _id,
     name,
@@ -34,7 +33,6 @@ export const chapterBySlugQuery = `*[_type == "chapter" && societyId.current == 
   description,
   stats,
   founded,
-  tallyContactFormId,
   "strategists": strategists[]-> {
     _id,
     name,

@@ -8,7 +8,7 @@ import Heading from "@/components/ui/Heading";
 import Label from "@/components/ui/Label";
 import FeatureBlock from "./FeatureBlock";
 import StrategistGrid from "@/components/sections/StrategistGrid";
-import TallyEmbed from "@/components/ui/TallyEmbed";
+import ContactFormEmbed from "@/components/ui/ContactFormEmbed";
 import Text from "@/components/ui/Text";
 import ApplyCTA from "@/components/sections/ApplyCTA";
 
@@ -126,18 +126,12 @@ export default function FlagshipChapterPage({
                 team.
               </Text>
             </div>
-            {chapter.tallyContactFormId ? (
-              <div className="mt-8">
-                <TallyEmbed
-                  formId={chapter.tallyContactFormId}
-                  title={`Contact ${chapter.name}`}
-                />
-              </div>
-            ) : (
-              <p className="mt-8 text-center text-grey-600">
-                Contact form coming soon.
-              </p>
-            )}
+            <div className="mt-8">
+              <ContactFormEmbed
+                chapterId={chapter.societyId}
+                title={`Contact ${chapter.name}`}
+              />
+            </div>
           </div>
         </Container>
       </Section>

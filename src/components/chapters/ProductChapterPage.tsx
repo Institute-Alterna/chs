@@ -8,7 +8,7 @@ import Text from "@/components/ui/Text";
 import SpecsGrid from "./SpecsGrid";
 import FeatureBlock from "./FeatureBlock";
 import StrategistGrid from "@/components/sections/StrategistGrid";
-import TallyEmbed from "@/components/ui/TallyEmbed";
+import ContactFormEmbed from "@/components/ui/ContactFormEmbed";
 import ApplyCTA from "@/components/sections/ApplyCTA";
 
 interface ProductChapterPageProps {
@@ -125,18 +125,12 @@ export default function ProductChapterPage({
                 team.
               </Text>
             </div>
-            {chapter.tallyContactFormId ? (
-              <div className="mt-8">
-                <TallyEmbed
-                  formId={chapter.tallyContactFormId}
-                  title={`Contact ${chapter.name}`}
-                />
-              </div>
-            ) : (
-              <p className="mt-8 text-center text-grey-400">
-                Contact form coming soon.
-              </p>
-            )}
+            <div className="mt-8">
+              <ContactFormEmbed
+                chapterId={chapter.societyId}
+                title={`Contact ${chapter.name}`}
+              />
+            </div>
           </div>
         </Container>
       </Section>

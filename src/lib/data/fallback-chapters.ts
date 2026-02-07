@@ -6,13 +6,13 @@ export const fallbackChapters: Chapter[] = [
     societyId: "robinson",
     name: "CHS Robinson",
     displayName: "Robinson",
-    location: "Tampa, FL",
+    location: "Tampa, Florida",
     description:
       "The founding chapter of the Computing Honour Society, established at Robinson High School. Focused on delivering workshops, mentorship, and community-driven tech education.",
     stats: {
-      members: 15,
+      members: 25,
       events: 3,
-      workshops: 3,
+      workshops: 5,
     },
     strategists: [
       {
@@ -41,22 +41,19 @@ export const fallbackChapters: Chapter[] = [
       },
     ],
     achievements: [
-      "Hosted first-ever CHS workshop series",
-      "Partnered with local tech organisations",
+      "Hosted first-ever CHS computer science education week workshop series",
       "Pioneered the student-led tech education model",
-      "Connected students with industry mentors",
       "Established comprehensive mentorship programme",
-      "Launched community outreach initiatives",
+      "Top-ranking in statewide cybersecurity competition",
     ],
     founded: "2025",
-    tallyContactFormId: "example-form-id",
     // New fields
     isFlagship: true,
     chapterIndex: 1,
     tagline: "The founding chapter",
     heroImageUrl: "/chapters/robinson/hero.webp",
     mission:
-      "CHS Robinson set the standard for what a Computing Honour Society chapter can achieve. We pioneered the model of student-led tech education that now spans schools worldwide.",
+      "CHS Robinson set the standard for what a Computing Honour Society chapter can achieve.",
     overview: undefined,
     features: [
       {
@@ -90,70 +87,41 @@ export const fallbackChapters: Chapter[] = [
     societyId: "lakes",
     name: "CHS Lakes",
     displayName: "Lakes",
-    location: "Tampa, FL",
+    location: "Tampa, United States",
     description:
-      "One of the earliest CHS chapters, based at Academy at The Lakes. Dedicated to making technology accessible and empowering students through hands-on projects and events.",
+      "This upcoming CHS chapter will be based at Academy at The Lakes.",
     stats: {
-      members: 10,
-      events: 2,
-      workshops: 4,
+      members: 1,
+      events: 0,
+      workshops: 0,
     },
     strategists: [
       {
         _id: "strategist-5",
         name: "Benson Lončar",
         role: "principal",
-        roleLabel: "Principal Strategist",
-      },
-      {
-        _id: "strategist-6",
-        name: "Casey Martinez",
-        role: "academic",
-        roleLabel: "Academic Strategist",
-      },
-      {
-        _id: "strategist-7",
-        name: "Drew Thompson",
-        role: "community",
-        roleLabel: "Community Strategist",
+        roleLabel: "Upcoming Principal Strategist",
       },
     ],
     achievements: [
-      "Launched community outreach programme",
-      "Organised school-wide coding event",
-      "Established inclusive learning workshops",
-      "Built partnerships with local educators",
-      "Created accessible tech curriculum",
+      "We are excited to share the achievements of CHS Lakes soon as we continue to grow.",
     ],
     founded: "2026",
-    tallyContactFormId: "example-form-id-lakes",
     // New fields
     isFlagship: false,
     chapterIndex: 2,
-    tagline: "Making technology accessible",
+    tagline: "Upcoming chapter",
     heroImageUrl: undefined,
     mission:
       "CHS Lakes brings the Computing Honour Society mission to Academy at The Lakes.",
     overview:
-      "CHS Lakes brings the Computing Honour Society mission to Academy at The Lakes, with a focus on accessibility and hands-on learning. We believe everyone deserves the opportunity to explore technology.",
+      "CHS Lakes brings the Computing Honour Society mission to Academy at The Lakes, with a focus on accessibility and hands-on learning.",
     features: [
       {
         _key: "accessible",
-        title: "Accessible Learning",
+        title: "Coming Soon",
         description:
-          "Breaking down barriers to tech education through inclusive workshops and patient mentorship.",
-      },
-      {
-        _key: "handson",
-        title: "Hands-On Projects",
-        description:
-          "Learning by building — from simple scripts to full applications.",
-      },
-      {
-        _key: "integration",
-        title: "School Integration",
-        description:
-          "Partnering with teachers and administration to enhance the curriculum.",
+          "We are excited to share more about CHS Lakes as we continue to grow.",
       },
     ],
   },

@@ -19,7 +19,7 @@ export default function FlagshipHero({
   isRobinson = false,
 }: FlagshipHeroProps) {
   return (
-    <section className="relative bg-black pt-50 lg:pt-140">
+    <section className="relative bg-black pt-50 lg:pt-[60vh]">
       <div className="container mx-auto px-6">
         <h1 className="mb-4 font-heading text-6xl font-bold leading-none text-white md:text-7xl lg:text-8xl">
           {name}
@@ -31,9 +31,8 @@ export default function FlagshipHero({
 
         <div className="mb-12 px-2">
           <p className="font-mono text-sm font-medium uppercase tracking-wider text-grey-400">
-            {isRobinson ? "THE FOUNDING CHAPTER" : tagline}
-          </p>
-          <p className="mt-2 font-mono text-sm font-medium uppercase tracking-wider text-grey-400">
+            {isRobinson ? "ENGINEERED FOR EXCELLENCE" : tagline} <br />
+            {isRobinson ? "IN THE SUNNY COAST OF" : "" } <br />
             {location}
           </p>
         </div>

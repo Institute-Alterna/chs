@@ -30,7 +30,6 @@ export interface Chapter {
   strategists: Strategist[];
   achievements: string[];
   founded: string;
-  tallyContactFormId?: string;
   // New Sanity-editable fields
   isFlagship: boolean;
   chapterIndex: number;
