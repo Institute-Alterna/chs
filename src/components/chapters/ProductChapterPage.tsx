@@ -20,7 +20,6 @@ export default function ProductChapterPage({
 }: ProductChapterPageProps) {
   return (
     <>
-      {/* 1. Product Hero */}
       <ProductHero
         name={chapter.name}
         tagline={chapter.tagline}
@@ -31,7 +30,6 @@ export default function ProductChapterPage({
         heroImageUrl={chapter.heroImageUrl}
       />
 
-      {/* 2. Overview */}
       <Section variant="dark">
         <Container>
           <div className="mx-auto max-w-3xl">
@@ -42,7 +40,6 @@ export default function ProductChapterPage({
         </Container>
       </Section>
 
-      {/* 3. Specifications */}
       <Section variant="off-white">
         <Container>
           <div className="mb-12 text-center">
@@ -59,7 +56,6 @@ export default function ProductChapterPage({
         </Container>
       </Section>
 
-      {/* 4. Focus Areas */}
       <Section variant="dark">
         <Container>
           <div className="mb-12 text-center">
@@ -80,7 +76,6 @@ export default function ProductChapterPage({
         </Container>
       </Section>
 
-      {/* 5. Achievements */}
       <Section variant="off-white">
         <Container>
           <div className="mx-auto max-w-3xl">
@@ -107,10 +102,8 @@ export default function ProductChapterPage({
         </Container>
       </Section>
 
-      {/* 6. Leadership */}
       <StrategistGrid strategists={chapter.strategists} />
 
-      {/* 7. Contact */}
       <Section variant="dark">
         <Container>
           <div className="mx-auto max-w-2xl">
@@ -135,7 +128,6 @@ export default function ProductChapterPage({
         </Container>
       </Section>
 
-      {/* 8. CTA */}
       <ApplyCTA
         heading="Want to start your own chapter?"
         description="Join the Computing Honour Society network and bring student-led tech education to your school."

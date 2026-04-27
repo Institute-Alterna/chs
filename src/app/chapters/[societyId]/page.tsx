@@ -39,7 +39,6 @@ export default async function ChapterDetailPage({
     notFound();
   }
 
-  // Conditional layout rendering based on isFlagship field
   if (chapter.isFlagship) {
     return <FlagshipChapterPage chapter={chapter} />;
   }

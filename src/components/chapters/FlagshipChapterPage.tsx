@@ -19,7 +19,6 @@ interface FlagshipChapterPageProps {
 export default function FlagshipChapterPage({
   chapter,
 }: FlagshipChapterPageProps) {
-  // Robinson-specific hardcoded content
   const isRobinson = chapter.societyId === "robinson";
   const extendedMission = isRobinson
     ? "As the founding chapter, we pioneered the model of student-led tech education that now spans schools worldwide."
@@ -27,7 +26,6 @@ export default function FlagshipChapterPage({
 
   return (
     <>
-      {/* 1. Flagship Hero */}
       <FlagshipHero
         name={chapter.name}
         tagline={chapter.tagline}
@@ -37,7 +35,6 @@ export default function FlagshipChapterPage({
         isRobinson={isRobinson}
       />
 
-      {/* 2. Mission Statement */}
       <Section variant="dark">
         <Container>
           <MissionStatement
@@ -47,7 +44,6 @@ export default function FlagshipChapterPage({
         </Container>
       </Section>
 
-      {/* 3. Impact Stats */}
       <Section variant="dark">
         <Container>
           <div className="pb-8 grid grid-cols-2 gap-8 md:grid-cols-3 lg:flex lg:justify-center lg:gap-16">
@@ -60,7 +56,6 @@ export default function FlagshipChapterPage({
         </Container>
       </Section>
 
-      {/* 4. Focus Areas */}
       <Section variant="off-white">
         <Container>
           <div className="mb-12 text-center">
@@ -81,7 +76,6 @@ export default function FlagshipChapterPage({
         </Container>
       </Section>
 
-      {/* 5. Achievements */}
       <Section variant="dark">
         <Container>
           <div className="mx-auto max-w-3xl">
@@ -108,10 +102,8 @@ export default function FlagshipChapterPage({
         </Container>
       </Section>
 
-      {/* 6. Leadership */}
       <StrategistGrid strategists={chapter.strategists} />
 
-      {/* 7. Contact Form */}
       <Section variant="off-white">
         <Container>
           <div className="mx-auto max-w-2xl">
@@ -136,7 +128,6 @@ export default function FlagshipChapterPage({
         </Container>
       </Section>
 
-      {/* 8. CTA */}
       <ApplyCTA
         heading="Want to start your own chapter?"
         description="Join the Computing Honour Society network and bring student-led tech education to your school."
