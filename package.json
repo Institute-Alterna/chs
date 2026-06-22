@@ -43,7 +43,7 @@
   },
   "overrides": {
     "postcss": "^8.5.15",
-    "undici": ">=7.24.0",
+    "undici": "7.28.0",
     "@swc/helpers": "0.5.18",
     "minimatch": ">=10.2.3",
     "@babel/core": ">=7.29.6",
