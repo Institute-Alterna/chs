@@ -27,11 +27,11 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://tally.so",
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https://cdn.sanity.io",
               "font-src 'self'",
-              "frame-src https://tally.so",
+              "frame-src https://tally.so https://forms.alterna.dev",
               "connect-src 'self' https://*.sanity.io https://*.apicdn.sanity.io",
             ].join("; "),
           },
